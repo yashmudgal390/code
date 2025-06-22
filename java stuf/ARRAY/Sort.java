@@ -3,6 +3,11 @@
 public class Sort {
 
     // BUBBLE SORT
+
+    /*element at j place is compared with next element if element at j is greater than it is replaced with element at j+1. 
+      this steps are continued till a sorted array is recived 
+     */
+
     public static void bubbleSort(int arr[]) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {  // Number of passes
@@ -18,6 +23,9 @@ public class Sort {
 
 
     // SELECTION SORT
+
+    //  in this sorting smallest element is shifted to the begning of of unsorted arrary.
+     
     public static void selSort(int arr[]){
         // loop for counting turns.
         for(int i= 0;i<arr.length-1;i++){
@@ -38,6 +46,9 @@ public class Sort {
     }
 
     // INSERTION SORT 
+
+// pick up an element from unsorted part and place it at right position in sorted part.
+
     public static void inseSort(int arr[]){
         for(int i =1;i<arr.length;i++){
             int curr = arr[i];
