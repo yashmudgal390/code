@@ -1,0 +1,20 @@
+.cant{
+  height: 500px;
+  width: 80%;
+  background-color: azure;
+  border: 2px solid black;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:  baseline;
+  /* flex-wrap: wrap; */
+  align-content: flex-start;
+
+
+}
+.cant div{
+  height: 100px;
+  width: 300px;
+  color: white;
+  font-size: 1.5em;
+}
