@@ -1,44 +1,11 @@
-#cant{
-    height: 400px;
-    width: 400px;
-    border: 2px solid rgb(0, 182, 222);
-    display: flex;
-    border-radius: 10px;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
-    /* background-color: rgba(0, 255, 255, 0.23); */
-}
-.alpha{
-    height: 100px;
-    width: 100px;
-    font-size: 50px;
-    text-align: center;
-    background-color: gray;
-    border: 2px solid black;
-    border-radius: 10px;
-    
+.item {
+    background-color: pink;
+    border: 1px solid black;
 }
 
-#box{
-    height: 50px;
-    width: 900px;
-    border: 2px solid aqua;
-    background-color: pink;
-    border-radius: 10px;
-    display: flex;
-    align-content: center;
-    /* flex-direction: row; */
-    justify-content:flex-start ;
-    /* align-content: center; */
-    
-    
-}
-.ins{
-    height: 50px;
-    width: 80px;
-    font-size: 24px;
-    border-radius: 10px;
-    line-height: 50px;
+@media (min-width: 400px) {
+    .item {
+        border-radius: 10px;
+        background-color: white;
+    }
 }
