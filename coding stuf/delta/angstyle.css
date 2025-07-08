@@ -34,3 +34,41 @@
     grid-column: 1 /span 12;
 
 }
+@media(max-width:720px){
+    .header{
+        grid-column:1/span 12 ;
+    }
+    .navigation{
+        grid-column: 1/span 12;
+        grid-row: 2;
+    }
+    .sidebar{
+        grid-column: 1 span 3;
+        grid-row: 3 /span 9;
+    }
+    .main{
+        grid-column: 4 /span 9;
+        grid-row: 3/span 9;
+    }
+    .ads{grid-row: 12;
+        grid-column: 1/span 3;
+    }
+    .footer{
+        grid-row: 12;
+        grid-column: 4/span 9;
+    }
+}
+.loader{
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid rgb(255, 0, 0);
+    border-radius:50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin{
+0% {transform: rotate(0deg);}
+100% {transform: rotate(360deg)}
+}
+
+        
