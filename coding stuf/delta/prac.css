@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .item {
     background-color: pink;
     border: 1px solid black;
@@ -9,3 +10,21 @@
         background-color: white;
     }
 }
+=======
+.cant{
+height: 300px;
+width: 600px;
+background-color: black;
+display: grid;
+grid-template-rows: 60px 60px 60px ;
+grid-template-columns: 100px 100px ;
+    
+}
+.item{
+    height: 50px;
+    width: 100px;
+    background-color: aquamarine;
+    text-align: center;
+    border: 2px solid white;
+}
+>>>>>>> 15178c8 (modified)
