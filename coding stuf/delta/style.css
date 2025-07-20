@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial;
 }
 
@@ -25,4 +25,12 @@ body {
 
 #description {
   background-color: antiquewhite;
+} */
+.btnstyle{
+  background-color: blue;
+  color: white;
+}
+.h1style{
+  color: purple;
+  
 }
