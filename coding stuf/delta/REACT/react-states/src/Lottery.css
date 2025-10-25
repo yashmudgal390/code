@@ -1,0 +1,10 @@
+.ticket{
+    border: 1px solid rgb(0, 247, 255);
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.smile{color: yellow;}
+.win{
+    color: pink;
+}

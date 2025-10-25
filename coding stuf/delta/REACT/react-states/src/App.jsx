@@ -3,15 +3,17 @@ import './App.css'
 import LikeButton from './LikeButton'
 import LudoBoard from './LudoBoard'
 import TodoList from './TodoList'
+import Lottery from './Lottery'
 
 function App() {
   
 
   return (
     <>
-    <TodoList/>
+    {/* <TodoList/> */}
       {/* <LudoBoard/>
       <LikeButton/> */}
+      <Lottery/>
 
     </>
   )
