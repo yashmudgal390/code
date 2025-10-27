@@ -1,43 +1,80 @@
-import { useState } from "react"
+import { useFormik } from 'formik';
 
-export default function CommentForm({AddNewComment}){
-    let[formData,setFormData]=useState({
-        username:"",
-        review:"",
-        rating:""
+const validate = values => {
+  const errors = {};
+  if (!values.username) {
+    errors.username = 'Required';
+  }
+  if (!values.review) {
+    errors.review = 'Required';
+  }
+  if (!values.rating) {
+    errors.rating = 'Required';
+  }
+  return errors;
+};
 
-    });
-    let handleDataChange=(event)=>{
-        setFormData((currData)=>{
-            return{...currData,[event.target.name]:event.target.value};
-        });
-    };
-    let handleSub=(event)=>{
-        event.preventDefault();
-        console.log(formData);
-        AddNewComment(formData);
-        setFormData({
-        username:"",
-        review:"",
-        rating:""
+export default function CommentForm({ AddNewComment }) {
+  const formik = useFormik({
+    initialValues: {
+      username: '',
+      review: '',
+      rating: '',
+    },
+    validate,
+    onSubmit: (values, { resetForm }) => {
+      AddNewComment(values);
+      resetForm();
+      console.log("✅ Comment added:", values);
+    },
+  });
 
-    });
-    }
-    return(
-        <div>
-            <h4>Leave Review</h4>
-            <form onSubmit={handleSub}>
-                <input placeholder="Username" value={formData.username}  name="username" type="text" onChange={handleDataChange}></input>
-                <br></br>
-                <br></br>
-                <textarea placeholder="Review" value={formData.review}  name="review" onChange={handleDataChange} />
-                <br></br>
-                <br></br>
-                <input placeholder="Rating" value={formData.rating}  name="rating" type="number" min={0} max={5} onChange={handleDataChange}></input>
-                <br></br>
-                <br></br>
-                <button>submit</button>            
-            </form>
-        </div>
-    )
+  return (
+    <div>
+      <h4>Leave Review</h4>
+      <form onSubmit={formik.handleSubmit}>
+        <input
+          placeholder="Username"
+          name="username"
+          type="text"
+          onChange={formik.handleChange}
+          value={formik.values.username}
+        />
+        {formik.errors.username && (
+          <div style={{ color: "red" }}>{formik.errors.username}</div>
+        )}
+        <br />
+        <br />
+
+        <textarea
+          placeholder="Review"
+          name="review"
+          onChange={formik.handleChange}
+          value={formik.values.review}
+        />
+        {formik.errors.review && (
+          <div style={{ color: "red" }}>{formik.errors.review}</div>
+        )}
+        <br />
+        <br />
+
+        <input
+          placeholder="Rating"
+          name="rating"
+          type="number"
+          min={0}
+          max={5}
+          onChange={formik.handleChange}
+          value={formik.values.rating}
+        />
+        {formik.errors.rating && (
+          <div style={{ color: "red" }}>{formik.errors.rating}</div>
+        )}
+        <br />
+        <br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
 }
