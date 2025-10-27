@@ -5,14 +5,15 @@ import LudoBoard from './LudoBoard'
 import TodoList from './TodoList'
 import Lottery from './Lottery'
 import Forms from './Forms'
-import CommentForm from './CommentForm'
+import Comment from './Comment'
 
 function App() {
   
 
   return (
     <>
-      <CommentForm/>
+      <Comment/>
+      
     </>
   )
 }
