@@ -1,47 +1,88 @@
-import { useState } from "react"
-import { v4 as uuidv4 } from 'uuid';
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
-export default function WishList(){
+export default function WishList() {
+  let [list, setList] = useState([]);
+  let [todo, setTodo] = useState("");
 
-    let[list,setList]=useState([{name:"todo",id:uuidv4()}]);
-    let[todo,setTodo]=useState();
+  const onInputChange = (e) => {
+    setTodo(e.target.value);
+  };
 
-
-    const onInputChange=(e)=>{
-        setTodo(e.target.value);
+  const onAdd = () => {
+    if (todo.trim() !== "") {
+      setList((prevValue) => [
+        ...prevValue,
+        { task: todo, id: uuidv4(), isDone: false },
+      ]);
+      setTodo("");
     }
-   const onAdd=()=>{
-        setList([...list,{name:todo ,id:uuidv4()}])
-        setTodo("");
-   }
+  };
 
-    return(
-        <>
-        <h2>Your WishList</h2>
-        <div className="toadd">
-            <input onChange={onInputChange} placeholder="Enter Event"></input>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button onClick={onAdd} style={{backgroundColor:"red"}}>ADD</button>
-            <hr></hr>
+  const onDeleteClick = (id) => {
+    setList((pl) => pl.filter((todo) => todo.id !== id));
+  };
 
-        </div>
-        <div>
-            {todo && todo.length>0 && todo.map(todo=>(
-                <div>
-                    
-                </div>
+  const onChange = (id) => {
+    setList((prVal) => {
+      return prVal.map((todo) => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            isDone: !todo.isDone, // toggle true/false for checkbox
+          };
+        } else {
+          return todo;
+        }
+      });
+    });
+  };
 
-            ))}
-        </div>
+  return (
+    <>
+      <h2>Your WishList</h2>
+      <div className="toadd">
+        <input
+          onChange={onInputChange}
+          value={todo}
+          placeholder="Enter Event"
+        />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button onClick={onAdd} style={{ backgroundColor: "red" }}>
+          ADD
+        </button>
+        <hr />
+      </div>
 
-        </>
-    )
-}            <div>
-                <label>
-                    <input type="checkbox"></input>
-                    &nbsp;&nbsp;
-                    <span>code</span>
-                </label>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <button><i class="fa-solid fa-trash"></i></button>
+      <div>
+        {list &&
+          list.length > 0 &&
+          list.map((todo) => (
+            <div key={todo.id}>
+              <label>
+                <input
+                  onChange={() => onChange(todo.id)}
+                  type="checkbox"
+                  checked={todo.isDone}
+                />
+                &nbsp;&nbsp;
+                <span
+                  style={
+                    todo.isDone
+                      ? { textDecorationLine: "line-through", color: "gray" }
+                      : {}
+                  }
+                >
+                  {todo.task}
+                </span>
+              </label>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <button onClick={() => onDeleteClick(todo.id)}>
+                <i className="fa-solid fa-trash"></i>
+              </button>
             </div>
+          ))}
+      </div>
+    </>
+  );
+}
