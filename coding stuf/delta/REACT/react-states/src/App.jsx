@@ -6,14 +6,17 @@ import TodoList from './TodoList'
 import Lottery from './Lottery'
 import Forms from './Forms'
 import Comment from './Comment'
+import { use, useState } from 'react'
+import BrandFilter from './BrandFilter'
+import AddToCart from './AddToCart'
+import WishList from './WishList'
+
 
 function App() {
-  
-
-  return (
+  return (    
     <>
-      <Comment/>
-      
+    <WishList/>
+
     </>
   )
 }
