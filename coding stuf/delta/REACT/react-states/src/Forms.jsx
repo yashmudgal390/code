@@ -3,20 +3,17 @@ import { useState } from "react"
 export default function Forms(){
     let[formData,setFormData]=useState({fullname:"",username:"",password:""})
     let handleInputChange=(event)=>{
-        let fieldName=event.target.name;
-        let newValue=event.target.value;
-
-        setFormData((currData)=>{
-            
-            return{...currData,[fieldName]:newValue};
-        });
-        
+        setFormData((currData)=>{            
+            return{...currData,[event.target.name]:event.target.value};
+        });        
     }
+
     let handleSub=(event)=>{
         event.preventDefault(); 
         console.log(formData)
         setFormData({fullname:"",username:"",password:""});
     }
+    
     return(
         <form onSubmit={handleSub}>
 

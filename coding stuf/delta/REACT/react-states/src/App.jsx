@@ -10,12 +10,14 @@ import { use, useState } from 'react'
 import BrandFilter from './BrandFilter'
 import AddToCart from './AddToCart'
 import WishList from './WishList'
+import UseReducer from './UseReduser'
 
 
 function App() {
   return (    
     <>
     <WishList/>
+    
 
     </>
   )
