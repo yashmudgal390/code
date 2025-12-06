@@ -16,7 +16,7 @@ import UseReducer from './UseReduser'
 function App() {
   return (    
     <>
-    <WishList/>
+    <UseReducer/>
     
 
     </>
