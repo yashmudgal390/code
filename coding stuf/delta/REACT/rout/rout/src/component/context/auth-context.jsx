@@ -12,6 +12,12 @@ const Authprovider = ({ children }) => {
     );
 };
 
-const useAuth = () => useContext(AuthCont);
+const useAuth = () => {
+    const context = useContext(AuthCont);
+    if (!context) {
+        throw new Error('useAuth must be used within Authprovider');
+    }
+    return context;
+};
 
 export { useAuth, Authprovider };
