@@ -1,0 +1,58 @@
+REDUX ARCHITECTURE
+
+UI (Component)
+   ↓ dispatch(action)
+Store
+   ↓ reducer(action)
+New State
+   ↓
+UI re-renders
+-------------------------
+What is Store?
+
+A JS object that holds the entire app state.
+ in slice the name will create your action.type in store the name or key we are using will become your state variable 
+
+-------------------------------------
+
+What slice creates automatically:
+
+reducer
+
+action creators
+
+action types
+---------------------
+Read state	    useSelector
+Change state	useDispatch
+------------------------------
+Subscribes to store
+
+Runs selector on every update
+
+Re-renders only if value changes
+===============================================
+What dispatch does:
+
+Sends an action object to store
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Button Click
+   ↓
+dispatch(increment())
+   ↓
+Store receives action
+   ↓
+Reducer runs
+   ↓
+Immer produces new state
+   ↓
+Store updates
+   ↓
+useSelector detects change
+   ↓
+Component re-renders
+
+
+Redux = Store + Provider + Slice + Dispatch + Selector

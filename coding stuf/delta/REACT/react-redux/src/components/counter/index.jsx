@@ -5,12 +5,12 @@ import { increment,decrement } from "../../slices/counterSlice";
 export const Counter = () => {
     const dispatch=useDispatch();
 const {count} = useSelector(state=>state.counter);
-console.log(count)
+
 
 const onUpClick=()=>{
     dispatch(increment());
 }
-const onDownClick=()=>{
+const onDownClick=()=>{ 
     dispatch(decrement());
 }
     return (
