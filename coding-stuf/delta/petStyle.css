@@ -1,0 +1,41 @@
+*{
+  background-color: #e0fdff;
+}
+h2{
+  color: rgb(136, 0, 255);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 span{
+  color: rgb(17, 0, 255);
+}
+#pets{
+  display: flex;
+  justify-content: space-evenly;
+}
+.card{
+  width: 400px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 3px 3px 8px rgb(133, 174, 255);
+  transition: 1s;
+}
+div img{
+  width: 100%;
+  border-radius: 25px;
+  
+}
+.card:hover{
+  box-shadow: 6px 6px 16px rgb(0, 128, 255);   
+}
+h4{
+  text-align: right;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media(max-width: 375px){
+  #pets{
+    flex-wrap: wrap;
+  }
+}

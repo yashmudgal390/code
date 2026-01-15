@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Web Player: Music For Everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="nav">
+                <div class="nav_option" style="opacity: 1;">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#">Home</a>
+                </div>
+                <div class="nav_option">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#">Search</a>
+                </div>                
+            </div>
+
+
+            <div class="library">
+                <div class="option">
+                    <div class="lib-option nav_option">
+                        <img src="./assets/library_icon.png">
+                        <a href="#"> Your Library</a>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="lib-box">
+                    <div class="box">
+                    <p class="b1">Create your first playlist</p>
+                    <p class="b2">It's easy, we'll help you</p>
+                    <button class="badge">Create playlist</button>
+                </div>
+                                    <div class="box">
+                    <p class="b1">Let's find some podcast to follow</p>
+                    <p class="b2">We'll keep you updated on new episodes</p>
+                    <button class="badge">Browse podcasts</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="st-nav">
+                <div class="st-nav-icon">
+                <button class="bt-nav"><img src="./assets/backward_icon.png"></button>
+                <button class="bt-nav hide"><img src="./assets/forward_icon.png" class="hide"></button>
+                </div>
+                <div class="st-nav-option">
+                <button class="badge nav-item hide" >Explore Permium</button>
+                <button class="badge nav-item dark-bg" ><i class="fa-regular fa-circle-down" style="margin-right: 5px;"></i>Install App</button>
+                <i class="fa-regular fa-user nav-item"></i>
+                </div>
+
+            </div>
+            
+                <h2>Recently Played</h2>
+                <div class="cards-cant">
+                    <div class="card">
+                        <img src="./assets/card1img.jpeg" class="card-img">
+                        <p class="card-title">Top 50 - Global </p>
+                        <p class="cards-info">Your daily updated of the most played ...</p>
+                    </div>
+                </div>
+
+                <h2>Trending music near you</h2>
+                <div class="cards-cant">
+                    <div class="card">
+                        <img src="./assets/card2img.jpeg" class="card-img">
+                        <p class="card-title">Mahiye jinna </p>
+                        <p class="cards-info">Darshan Raval</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/card3img.jpeg" class="card-img">
+                        <p class="card-title">Mere pass tum ho </p>
+                        <p class="cards-info">Mohit Chauhan, Suzanne D'Mello</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/card4img.jpeg" class="card-img">
+                        <p class="card-title">NAA ready </p>
+                        <p class="cards-info">Anirudh</p>
+                    </div>     
+                    <div class="card">
+                        <img src="https://www.seedhemaut.com/wp-content/uploads/2023/08/Seedhe-Maut-Lunch-Front-Cover-Art-4K.png" class="card-img">
+                        <p class="card-title">Champions</p>
+                        <p class="cards-info">Seedhe Maut,Rawal</p>
+                    </div>  
+                    <div class="card">
+                        <img src="https://f4.bcbits.com/img/a3924108681_10.jpg" class="card-img">
+                        <p class="card-title">Namastute</p>
+                        <p class="cards-info">Seedhe Maut</p>
+                    </div>                                                                                             
+                </div>  
+                <h2>Featured Charts</h2>
+                <div class="cards-cant">
+                    <div class="card">
+                        <img src="./assets/card5img.jpeg" class="card-img">
+                        <p class="card-title">Top songs Global </p>
+                        <p class="cards-info">Your daily updated of the most played ...</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/card6img.jpeg" class="card-img">
+                        <p class="card-title">Top songs India </p>
+                        <p class="cards-info">Your daily updated of the most played ...</p>
+                    </div>                    
+                </div> 
+                <div class="footer">
+                    <div class="line"></div>
+                </div>                             
+            
+        </div>
+        <div class="music_player">
+            <div class="album">
+                <div class="album-img"><img src="https://f4.bcbits.com/img/a3924108681_10.jpg" style="height: 52px;width: 52px;"></div>
+                <div class="album-name">
+                    <p class="album-title">Namastute</p>
+                    <p class="album-info">Seedhe maut</p>
+                </div>
+                <div class="album-icon"><img src="./Homework Assets/album_icon1.png" ></div>
+            </div>
+            <div class="player">
+                <div class="player-control">
+                    <img src="./assets/player_icon1.png" class="player-control-icon">
+                    <img src="./assets/player_icon2.png" class="player-control-icon">
+                    <img src="./assets/player_icon3.png" class="player-control-icon" style="opacity: 1;height: 2rem;">
+                    <img src="./assets/player_icon4.png" class="player-control-icon">
+                    <img src="./assets/player_icon5.png" class="player-control-icon">
+                </div>
+                <div class="playback-bar">
+                    <span class="cur-time">00:00</span>
+                    <input type="range" min="0" max="100" class="progess-bar" step="1">
+                    <span class="tot-time">02:00</span>
+                </div>
+            </div>
+            <div class="controls">
+                <img src="./Homework Assets/controls_icon1.png" class="controls-icons">
+                <img src="./Homework Assets/controld_icon2.png" class="controls-icons">
+                <img src="./Homework Assets/controls_icon3.png" class="controls-icons" style="width: 1rem;height: 1rem;">
+                <img src="./Homework Assets/controls_icon4.png" class="controls-icons" style="width: 1rem;height: 1rem;">
+                <img src="./Homework Assets/controls_icon5.png" class="controls-icons">
+                <input type="range" min="0" max="100" step="1" class="volume-bar">
+                <img src="./Homework Assets/album_icon2.png" class="controls-icons">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
