@@ -2,17 +2,17 @@
 from pathlib import Path
 
 def readFileAndFolder():
-    path=Path('')
+    path=Path(__file__).parent
     # rglob recusively read and provide all items in each file of folder 
-    items=list(path.rglob('*'))
-    for i,items in enumerate(items):
-        print(f'{i+1} : {items}')
+    items=list(path.glob('*'))
+    for i,item in enumerate(items):
+        print(f'{i+1} : {item}')
 
 def createFile():
     try:
         readFileAndFolder()
         name=input("enter file name : ")
-        p=Path(name)
+        p=Path(__file__).parent / name
         if not p.exists():
             with open(p,'w') as fs:
                 data=input("enter data to write in file : ")
@@ -28,7 +28,7 @@ def readFile():
     try:
         readFileAndFolder()
         name=input('enter file name to read :')
-        p=Path(name)
+        p=Path(__file__).parent / name
         if p.exists() and p.is_file():
             with open(p,'r') as fs:
                 data=fs.read()
@@ -42,7 +42,7 @@ def updateFile():
     try:
         readFileAndFolder()
         name = input("enter file name to update : ")
-        p=Path(name)
+        p=Path(__file__).parent / name
         if p.exists() and p.is_file():
             while True:
                 print("press 0 if you want to exit ")
@@ -79,7 +79,7 @@ def deleteFile():
     try:
         readFileAndFolder()
         name = input("enter file name to delete : ")
-        p=Path(name)
+        p=Path(__file__).parent / name
         if p.exists() and p.is_file():
             p.unlink()
             print("file deleted successfully")
