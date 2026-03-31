@@ -12,19 +12,19 @@
 
 
 #random number game
-import random as r
-num=r.randint(1,10)
-print(num)
+# import random as r
+# num=r.randint(1,10)
+# print(num)
 
 
-while True:
-    guess=int(input("make guess "))
+# while True:
+#     guess=int(input("make guess "))
 
-    if guess==num:
-        print("ur guess is correct ")
-        break
-    elif guess>num:
-        print("ur guess is greater than number")
+#     if guess==num:
+#         print("ur guess is correct ")
+#         break
+#     elif guess>num:
+#         print("ur guess is greater than number")
         
 #     else:
 #         print("ur guess is smaller than number")
