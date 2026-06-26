@@ -1,27 +1,19 @@
 
 
-    
-
-public static int ls(int numbers[],int key){
-    for(int i=0;i<numbers.length;i++){
-        if (numbers[i]==key) {
+public class linearSearch{
+public static int linearSearch(int arr[],int key){
+    for( int i = 0 ; i <arr.length ;i++){
+        if (arr[i]==key){
             return i;
-        }}
-       
-            return -1;
+        }
     }
-public static void main (String args[]){
-    int numbers[]={2,4,5,6,7,10,11,12,15};
-    Scanner sc = new Scanner(System.in);
+    return -1;  
 
-    int key =sc.nextInt();
-    int index=ls(numbers, key);
-    if (index==-1) {
-        System.out.println("Not Found ");
-    }
-    else{
-        System.out.println(index);
-    }
-    sc.close();
 }
+public static void main (String []args){
+    int arr[] ={1,2,3,4,5,6,7,8,9};
+    int key = 5;
+    System.out.println("key is found at index : "+linearSearch(arr,key));
 
+}
+}
