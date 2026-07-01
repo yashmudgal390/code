@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Threesum",
+            "request": "launch",
+            "mainClass": "Threesum",
+            "projectName": "coding-stuf_e5f71d1c"
+        },
+        {
+            "type": "java",
+            "name": "BuySell",
+            "request": "launch",
+            "mainClass": "BuySell",
+            "projectName": "coding-stuf_e5f71d1c"
+        },
+        {
+            "type": "java",
+            "name": "MajorEle",
+            "request": "launch",
+            "mainClass": "MajorEle",
+            "projectName": "coding-stuf_e5f71d1c"
+        },
+        {
+            "type": "java",
+            "name": "reverseArray",
+            "request": "launch",
+            "mainClass": "reverseArray",
+            "projectName": "coding-stuf_e5f71d1c"
+        },
+        {
+            "type": "java",
             "name": "binarySearch",
             "request": "launch",
             "mainClass": "binarySearch",

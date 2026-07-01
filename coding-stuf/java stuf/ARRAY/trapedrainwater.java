@@ -12,7 +12,7 @@ public class trapedrainwater {
 
         int rightmax[]=new int [n];
         rightmax[n-1]=height[n-1];
-        for(int i = n-2; i>=0 ; i--){
+        for(int i = n-2; i>=0 ; i--){z
             rightmax[i]=Math.max(height[i],rightmax[i+1]);
         }
 
