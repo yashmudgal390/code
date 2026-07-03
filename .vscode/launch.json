@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "mergeInterval",
+            "request": "launch",
+            "mainClass": "mergeInterval",
+            "projectName": "coding-stuf_e5f71d1c"
+        },
+        {
+            "type": "java",
+            "name": "staircaseser",
+            "request": "launch",
+            "mainClass": "staircaseser",
+            "projectName": "coding-stuf_e5f71d1c"
+        },
+        {
+            "type": "java",
             "name": "Threesum",
             "request": "launch",
             "mainClass": "Threesum",
