@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Rotate",
+            "request": "launch",
+            "mainClass": "Rotate",
+            "projectName": "coding-stuf_e5f71d1c"
+        },
+        {
+            "type": "java",
             "name": "mergeInterval",
             "request": "launch",
             "mainClass": "mergeInterval",

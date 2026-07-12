@@ -67,7 +67,7 @@ public class Sort {
     // COUNTING SORT 
 
     public static void countSort(int arr[]){
-
+        
         // finding the largest number in array
         int largest =Integer.MIN_VALUE;
         for (int i =0 ;i <arr.length ;i++){
@@ -82,6 +82,7 @@ public class Sort {
         }
 
         // loop for sorting 
+        
         int j =0;
         for (int i =0 ; i<count.length ;i++){
             while (count[i] > 0) {
